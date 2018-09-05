@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-09-03 19:31:03
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-05 00:19:17
+* @Last Modified time: 2018-09-05 19:17:54
 */
 //获取元素
 	window.onload=function() {	
@@ -306,10 +306,40 @@
                 //5.当前元素出现
                 son1[i].style.display="block";
             }
+             lis1[i].onmouseout=function(){
+             son1[i].style.display="none";
+         }
+
         }
-        lis1[i].onmouseout=function(){
-        son1[i].style.display="none";
+       
+
+
+
+     let hot=document.querySelectorAll(".hot");
+     let hot1=document.querySelectorAll(".bottom-right");
+     console.log(hot1);
+     hot[0].classList.add("active");
+     hot1[0].style.zIndex=199;
+     for(let i=0;i<hot.length;i++){
+        hot[i].onmouseenter=function(){
+            for(let j=0;j<hot1.length;j++){
+                hot1[j].style.zIndex=0;
+                hot[j].classList.remove("active");
+            } 
+             hot1[i].style.zIndex=200; 
+             hot[i].classList.add("active");      
+        }
      }
+
+ let back=document.querySelector(".back"); 
+ console.log(back);
+     window.onscroll=function(){
+        let h=document.body.scrollTop||document.documentElement.scrollTop;
+         back.onclick=function(){
+            animate(document.body,{scrollTop:0},600);
+            animate(document.documentElement,{scrollTop:0},600);
+    }
+}
 }
 
 

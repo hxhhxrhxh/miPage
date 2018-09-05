@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-01 21:12:31
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-05 00:40:48
+* @Last Modified time: 2018-09-05 21:43:20
 */
 *{
 	margin: 0;
@@ -18,14 +18,32 @@
 	position: fixed;
 	top: 180px;
 	right: 0;
-	z-index: 999;
+	z-index: 99;
 }
 
 .fix ul li{
 	width: 82px;
 	height: 90px;
 	border: 1px solid #F5F5F5;
-
+	
+}
+.back{
+	width: 82px;
+	height: 90px;
+	border: 1px solid #F5F5F5;
+	background:white;
+	position: fixed;
+	top:460px;
+	right: 0;
+	z-index: 99;
+	color: #777777;
+	text-align: center;
+	
+}
+.back img{
+	margin-top: 20px;
+	/* margin-left: 27px; */
+	
 }
 .fix ul li img{
 	margin-top: 20px;
@@ -43,6 +61,10 @@
 
 }
 .fix ul li:hover a{
+	color: #FF6B00;
+
+}
+.back:hover p{
 	color: #FF6B00;
 
 }
@@ -261,12 +283,12 @@
 	float: left;
 }
 .box1 ul li .son1{
-	width:100%; 
+	width:1492px; 
 	height: 200px;
 	background: yellow;
 	position: absolute;
 	top: 100px;
-	left: 0;
+	left: -133px;
 	display: none;
 	/* position: fixed;
 	top: 0;
@@ -469,13 +491,19 @@ input.btn{
         flex-direction: row; */
     }
  .home .list ul li .son ul{
- 	/* width: 248px;
- 	height:460px; */
+ 	/* width: 248px; */
+ 	height:460px;
  	/* background: yellow; */
  	float: left;
+ 	display: flex;
+ 	flex-direction: column;
+ 	/* background: yellow; */
+}
+ .home .list ul li .son .list-one{
+ 	
 }
  .home .list ul li .son ul li{
- 	width:248px;
+ 	width:247px;
  	/* height: 50px; */
  	/* background: yellow; */
  	/* border: 1px solid #000; */
@@ -483,8 +511,12 @@ input.btn{
  	display: flex;
  	flex-direction: row;
  	line-height: 75px;
- 	font-size: 20px;
+ 	font-size: 14px;
+ 	padding-left: 25px;
 } 
+ .home .list ul li .son ul li p{
+	padding-left: 10px;
+}
  .home .list ul li .son ul li img{
  	width:40px;
  	height:40px;
@@ -721,6 +753,7 @@ input.btn{
 	/* border: 1px solid #E0E0E0; */
 	float: right; 
 	padding-left: 6px;
+	cursor: pointer;
 	/* border: 1px solid #E0E0E0; */
 }
 .shop .top2 .shopp .shoppleft-list{
@@ -765,11 +798,11 @@ input.btn{
 }
 
 .shop .rainbow{
-    width: 232px;
+    width: 234px;
 	height: 339px;
 	background:#F1EDED;
 	float: left;
-	margin-right: 10px;
+	margin-right: 15px;
 	border-top: 1px solid red;
 }
 .shop .rainbow .time{
@@ -843,7 +876,7 @@ input.btn{
 	/* margin-left: 234px; */
 }
 .box2 ul{
-	width: 1942px;
+	width: 1982px;
 	height: 340px;
 	/* background: blue; */
 	transition: all 1s;
@@ -854,7 +887,7 @@ input.btn{
 .box2 ul li{
 	width: 234px;
 	height: 340px;
-	margin-right:10px;
+	margin-right:15px;
 	/* background:yellow; */
 	float: left;
 }
@@ -1138,6 +1171,7 @@ input.btn{
 	/* background: blue; */
 	float: right;
 	margin-top: 20px;
+	cursor: pointer;
 	/* padding: 16px 0 0 */
 }
 .appliance .electric ul li{
@@ -1153,8 +1187,12 @@ input.btn{
     text-align: center;
     line-height: 26px;   
 }
-.appliance .electric ul li:hover{
+/* .appliance .electric ul li:hover{
 
+	color: #ff6700;
+	border-bottom: 1px solid #ff6700;
+} */
+.appliance .electric .active{
 	color: #ff6700;
 	border-bottom: 1px solid #ff6700;
 }
@@ -1169,66 +1207,82 @@ input.btn{
 .appliance .bottom{
 	width: 100%;
 	height: 624px;
-	/* background: #999; */
+	
 	float: left;
  }
-
-.appliance .bottom ul li{
-	width: 237.2px;
- 	height: 300px;
- 	background: white;
- 	margin-right: 10px;
- 	float: left;
+.appliance .bottom .bottom-all{
+	width: 100%;
+	height: 615px;
+	/* background: red; */
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+.appliance .bottom .bottom-all .bottom-left{
+	/* float: left; */
+}
+.appliance .bottom .bottom-all .bottom-left ul li{
+	width: 234px;
+	height: 300px;
+	background: white;
+	margin-bottom: 14px;
+	margin-right: 14px;
+	/* float: left; */
+}
+.appliance .bottom .bottom-all .bottom-left ul li img{
+	width: 100%;
+	height: 100%;
+}
+.appliance .bottom .bottom-all .bottom-right{
+	width: 992px;
+	/* background: pink; */
+	position: absolute;
+	top: 0;
+	left: 248px;
+	/* float: left; */
+}
+.appliance .bottom .bottom-all .bottom-right ul li{
+	width: 234px;
+	height: 300px;
+	background:white;
+	margin-bottom: 14px;
+	float: left;
+	margin-right: 14px;
  	list-style: none;
- 	margin-top: 10px;
  	position: relative;
  	overflow: hidden;
  	transition: all .5s;
 
 }
-.appliance .bottom ul li:hover{
-	transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+.appliance .bottom .bottom-all .bottom-right ul li:nth-child(4){
+	margin-right: 0;
+}
+.appliance .bottom .bottom-all .bottom-right ul li:nth-child(8){
+	margin-right: 0;
+	/* margin-bottom: 0; */
+	height:143px;
+}
+.appliance .bottom .bottom-all .bottom-right ul li:nth-child(9){
+	margin-right: 0;
+	height: 143px;
 }
 
-.appliance .bottom ul li:nth-child(5){
-	margin-right: 0;
- 	
-}
-.appliance .bottom ul li:nth-child(10){
-	margin-right: 0;
-	height: 145px;
-	width: 234px;
-	position: relative;
-}
-.appliance .bottom ul li:nth-child(11){
-	margin-right: 0;
-	height: 145px;
-	position: relative;
-}
+.appliance .bottom .bottom-right ul li a{
+	font-size: 14px;
+    font-weight: 400;
+	display: block;
+	color: #333;
 
-.appliance .bottom ul li img{
+	text-align: center;
+    text-decoration: none;
+}
+.appliance .bottom .bottom-right ul li img{
 	display: block;
 	margin: 0 auto;
 	margin-top: 30px;
 }
 
-.appliance .bottom .pic{
-	margin-top: 0;
-}
-
-.appliance .bottom ul li a{
-	font-size: 14px;
-    font-weight: 400;
-	display: block;
-	color: #333;
-	/* line-height: 50px; */
-	text-align: center;
-    text-decoration: none;
-}
-
-
-.appliance .bottom ul li .one{
+.appliance .bottom .bottom-right ul li .one{
 	font-size: 12px;
 	color: #b0b0b0;
 	text-align: center;
@@ -1236,7 +1290,7 @@ input.btn{
 	display: block;
 	padding-top: 5px;
 }
-.appliance .bottom ul li .two{
+.appliance .bottom .bottom-right ul li .two{
 	font-size: 14px;
 	color: #ff6700;
 	text-align: center;
@@ -1244,13 +1298,12 @@ input.btn{
 	display: block;
 	margin-top: 15px;
 }
-.appliance .bottom ul li del{
+.appliance .bottom .bottom-right ul li del{
     font-size: 14px;
 	color: #b0b0b0;
 	margin-left: 5px;
 }
-
-.appliance .bottom ul li .orange{
+.appliance .bottom .bottom-right ul li .orange{
 	width:237.2px;
 	height: 70px;
 	background: #ff6700;
@@ -1260,10 +1313,10 @@ input.btn{
 	transition-duration: .2s;   
 }
 
-.appliance .bottom ul li:hover .orange{
+.appliance .bottom .bottom-right ul li:hover .orange{
 	transform: translateY(-70px);
 }
-.appliance .bottom .orange .w{
+.appliance .bottom .bottom-right .orange .w{
 	display: block;
 	font-size: 12px;
 	color: white;
@@ -1272,44 +1325,123 @@ input.btn{
 	text-align: left;
 
 }
-/* .box2 .list p{
-    display: block;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 20px;
+.appliance .bottom .bottom-right ul li .red{
+	width: 60px;
+	height: 20px;
+	background: red;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+}
+.appliance .bottom .bottom-right ul li .green{
+	width: 60px;
+	height: 20px;
+	background:#6AC652;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left:84px;
+}
+.appliance .bottom .bottom-right ul li .orange{
+	width:237.2px;
+	height: 70px;
+	background: #ff6700;
+	position: absolute;
+	top: 0;
+	margin-top:300px; 
+	transition-duration: .2s;   
+}
+
+.appliance .bottom .bottom-right ul li:hover .orange{
+	transform: translateY(-70px);
+}
+.appliance .bottom .bottom-right .orange .w{
+	display: block;
+	font-size: 12px;
+	color: white;
+	line-height:20px;
+	padding:8px 35px;
+	text-align: left;
+
+}
+.appliance .bottom .bottom-right ul li{
+	width: 237.2px;
+ 	height: 300px;
+ 	background: white;
+ 	margin-right: 10px;
+ 	float: left;
+ 	list-style: none;
+ 	/* margin-top: 10px; */
+ 	position: relative;
+ 	overflow: hidden;
+ 	transition: all .5s;
+
+}
+.appliance .bottom .bottom-right ul li:hover{
+	transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.appliance .bottom .bottom-right ul li:nth-child(5){
+	/* margin-right: 0; */
+ 	
+}
+/* .appliance .bottom .bottom-right ul li:nth-child(10){
+	margin-right: 0;
+	height: 145px;
+	width: 234px;
+	position: relative;
+}
+.appliance .bottom .bottom-right ul li:nth-child(11){
+	margin-right: 0;
+	height: 145px;
+	position: relative;
 } */
-.appliance .bottom ul li .pic1{
+
+
+
+.appliance .bottom .pic{
+	margin-top: 0;
+}
+
+
+
+.appliance .bottom .bottom-right ul li .pic1{
 	position: absolute;
 	right: 20px;
 	top: 22px;
 } 
-.appliance .bottom ul li .three{
+.appliance .bottom .bottom-right ul li .three{
 	display: block;
 	font-size: 15px;
 	margin: 50px 110px 5px 30px
 }
-.appliance .bottom ul li .four{
+.appliance .bottom .bottom-right ul li .four{
 	font-size: 15px;
 	color: red;
     margin: 0 110px 0 30px;
 }
-.appliance .bottom ul li .pic10{
+.appliance .bottom .bottom-right ul li .pic10{
 	position: absolute;
 	right: 35px;
 	top: 28px;
 } 
-.appliance .bottom ul li .three1{
+.appliance .bottom .bottom-right ul li .three1{
 	display: block;
 	font-size: 15px;
 	margin: 50px 110px 5px 20px
 }
-.appliance .bottom ul li .four1{
+.appliance .bottom .bottom-right ul li .four1{
 	display: block;
 	font-size: 15px;
 	color: red;
 	margin-left: -30px;
-   /*  margin: 0 110px 0 px; */
+  
 }
 .pic3{
 	width: 100%;
@@ -1327,7 +1459,7 @@ input.btn{
 .xm-recommend{
 	width:100%;
 	height: 382px;
-	/* background: yellow; */
+	background: #F5F5F5;
 	float: left;
 	
 }
@@ -1354,6 +1486,7 @@ input.btn{
 	/* border: 1px solid #E0E0E0; */
 	float: right; 
 	padding-left: 6px;
+	cursor: pointer;
 	/* border: 1px solid #E0E0E0; */
 }
 .xm-recommend .top2 .shopp .rleft-list{
@@ -1401,7 +1534,7 @@ input.btn{
 .xm-recommend .bottom ul li{
     width: 237px;
     height: 300px;
-    /* background:yellow; */
+    background:white;
     float: left;
     list-style: none;
     margin-right: 10px;
