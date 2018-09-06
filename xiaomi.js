@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-09-03 19:31:03
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-05 19:17:54
+* @Last Modified time: 2018-09-06 16:21:53
 */
 //获取元素
 	window.onload=function() {	
@@ -294,22 +294,18 @@
     let lis1=document.querySelectorAll(".tellinger .telling");
     let son1=document.querySelectorAll(".son1");
         console.log(lis1);
-        console.log(son1);
-        //2.遍历每一个li
+        console.log(son1); 
         for(let i=0;i<lis1.length;i++){
-            //3.当鼠标移入每一个li时的操作
             lis1[i].onmouseover=function () {
-                //4.其余子元素消失
                 for(let j=0;j<son1.length;j++){
                     son1[j].style.display="none";
-                }
-                //5.当前元素出现
+                } 
                 son1[i].style.display="block";
-            }
-             lis1[i].onmouseout=function(){
-             son1[i].style.display="none";
+                 
+        }
+        lis1[i].onmouseout=function(){
+                 son1[i].style.display="none";
          }
-
         }
        
 
