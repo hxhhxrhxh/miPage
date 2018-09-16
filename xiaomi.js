@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-09-03 19:31:03
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-06 16:21:53
+* @Last Modified by:   hxhhxrhxh
+* @Last Modified time: 2018-09-16 16:44:27
 */
 //获取元素
 	window.onload=function() {	
@@ -336,6 +336,36 @@
             animate(document.documentElement,{scrollTop:0},600);
     }
 }
+
+
+//倒计时
+    let num=document.querySelectorAll(".timing .num");
+    // console.log(num);
+   
+    let t5=setInterval(fn,1000);
+    function fn(){
+
+       num.forEach((value,index)=>{
+            
+            value.innerHTML=move1()[index];
+       })
+    }
+    fn();
+    function move1(){
+        let date=new Date();
+        let time5=new Date(2018,11,20);
+        let timeafter=date.getTime();
+        let timebefore=time5.getTime(2018,11,20);
+        let timeing=Math.floor((timebefore-timeafter)/1000);
+        // console.log(timeing);
+        let arr=[];
+        let hour=Math.floor(timeing%(30*24*60*60)%(60*60*24)/(60*60));
+        let minute=Math.floor(timeing%(30*24*60*60)%(60*60*24)%(60*60)/60);
+        let second=Math.floor(timeing%(30*24*60*60)%(60*60*24)%(60*60)%60);
+        // console.log(hour,minute,second);
+        arr.push(hour,minute,second);
+        return arr;
+    }
 }
 
 
